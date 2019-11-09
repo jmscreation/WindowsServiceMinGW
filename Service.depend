@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1573232048 source:c:\users\shock\desktop\c++\windowsservice\library\cppwindowsservice.cpp
+	<stdio.h>
+	<windows.h>
+	"ServiceInstaller.h"
+	"ServiceBase.h"
+	"SampleService.h"
+
+1573256340 c:\users\shock\desktop\c++\windowsservice\library\serviceinstaller.h
+
+1573257406 c:\users\shock\desktop\c++\windowsservice\library\servicebase.h
+
+1573259782 c:\users\shock\desktop\c++\windowsservice\library\sampleservice.h
+
+1573259841 source:c:\users\shock\desktop\c++\windowsservice\library\sampleservice.cpp
+	"../includes.h"
+
+1573257406 c:\users\shock\desktop\c++\windowsservice\library\threadpool.h
+	<memory>
+
+1573258571 c:\users\shock\desktop\c++\windowsservice\includes.h
+	"defines.h"
+	<iostream>
+	<ctime>
+	<windows.h>
+	<strsafe.h>
+	<atomic>
+	<assert.h>
+	<stdio.h>
+	"library/ThreadPool.h"
+	"library/ServiceInstaller.h"
+	"library/ServiceBase.h"
+	"library/SampleService.h"
+
+1573259252 c:\users\shock\desktop\c++\windowsservice\defines.h
+
+1573257407 source:c:\users\shock\desktop\c++\windowsservice\main.cpp
+	"includes.h"
+
+1573257406 source:c:\users\shock\desktop\c++\windowsservice\library\serviceinstaller.cpp
+	"../includes.h"
+
+1573258824 source:c:\users\shock\desktop\c++\windowsservice\library\servicebase.cpp
+	"../includes.h"
+

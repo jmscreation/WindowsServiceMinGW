@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Service" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="C++ Service Exe">
+				<Option output="bin/C++/Service" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/C++/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_730_64bit_compiler" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-m64" />
+			<Add option="-Wno-deprecated-declarations" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add option="-static" />
+			<Add option="-m64" />
+		</Linker>
+		<Unit filename="defines.h" />
+		<Unit filename="includes.h" />
+		<Unit filename="library/SampleService.cpp" />
+		<Unit filename="library/SampleService.h" />
+		<Unit filename="library/ServiceBase.cpp" />
+		<Unit filename="library/ServiceBase.h" />
+		<Unit filename="library/ServiceInstaller.cpp" />
+		<Unit filename="library/ServiceInstaller.h" />
+		<Unit filename="library/ThreadPool.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
