@@ -34,6 +34,11 @@ If you have [SERVICE_LOG](https://github.com/jmscreation/WindowsServiceMinGW/blo
 To check your event logs, simply open up the Windows event viewer, and open up *Windows Logs -> Application*
 Your service's logged events will have your [SERVICE_NAME](https://github.com/jmscreation/WindowsServiceMinGW/blob/f26316532bd0c07df6a6ab5b6db8289eaf011936/defines.h#L6) in the log.
 
+### Creating Your Service
+Once you are comfortable with the program compiling and configuring your service settings, you will want to create your service application.
+You will be able to write your own service code [in the SampleService.cpp file](https://github.com/jmscreation/WindowsServiceMinGW/blob/dad6d5a984c38d14d9a606014d63a0f135d2a7ef/library/SampleService.cpp#L97).
+This is where your code may go. It is not required to have your code here. It may help to instead instantiate an object of your own service application class, and execute an update within the while loop.
+
 ### Please Note
 Your antivirus will flag your binary as dangerous. The reason for this is due to the unsigned executable that straight installs a windows service. Under normal circumstances, this is very dangerous if you don't know the code or you don't know what you are doing. Because this is for educational purposes, this is safe to do so.
 
