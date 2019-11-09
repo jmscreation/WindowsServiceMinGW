@@ -94,7 +94,9 @@ void CSampleService::ServiceWorkerThread(void)
     {
 
 
-        // Perform main service function here...
+        /// Perform main service function here...
+
+
         Sleep(500);  // Simulate some lengthy operations.
 
         CheckForPause();   // Pause the worker thread if the system requested a pause
