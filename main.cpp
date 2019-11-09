@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
             std::cout << "Parameters:" << std::endl;
             std::cout << " -install  to install the service." << std::endl;
             std::cout << " -remove   to remove the service." << std::endl;
+            std::cout << " -start   to start the service." << std::endl;
 
 
             CSampleService service(SERVICE_NAME);

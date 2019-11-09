@@ -12,16 +12,11 @@
 				<Option type="1" />
 				<Option compiler="gnu_gcc_730_64bit_compiler" />
 				<Option use_console_runner="0" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-Wall" />
+			<Add option="-O2" />
+			<Add option="-Wunreachable-code" />
 			<Add option="-std=c++11" />
 			<Add option="-m64" />
 			<Add option="-Wno-deprecated-declarations" />
