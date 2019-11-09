@@ -28,8 +28,10 @@ You may also use the compiler below as I've confirmed that this compiler works. 
 
 Once you get the binary compiled, you can simply run the Service.exe from the command line as follows:
 
-```Service.exe /install```  Install the service and start it
-```Service.exe /remove```  Stop and uninstall the service
+```Service.exe /install``` Install the service and start it
+
+```Service.exe /remove``` Stop and uninstall the service
+
 ```Service.exe /start```  Start the service if it's not running
 
 These are currently the only command lines available.
