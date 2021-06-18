@@ -3,15 +3,27 @@
 
 This project demonstrates compiling a windows service using MinGW with the CodeBlocks IDE.
 
-This uses MinGW 7.3.0, with the -m64 compile flag.
+This uses MinGW 64bit compiler.
 I personally prefer to compile 64bit applications as this is what all future operating systems will eventually be required to run; however, this project should (this has not yet been tested) still compile for 32bit operating systems.
 
 ## Setup
 
-To get you up and running, you need to have CodeBlocks IDE installed.
-You also need to setup CodeBlocks with the right compiler
+To get you up and running, you can use CodeBlocks IDE to open the existing CodeBlocks project; You will need to setup CodeBlocks with the right compiler.
+You can also use a custom build script to compile the application.
+
+To compile, run the command lines:
+```
+cd path\to\WindowsServiceMinGW
+c++.exe -O2 -std=c++11 -c library\SampleService.cpp -o SampleService.o
+c++.exe -O2 -std=c++11 -c library\ServiceBase.cpp -o ServiceBase.o
+c++.exe -O2 -std=c++11 -c library\ServiceInstaller.cpp -o ServiceInstaller.o
+c++.exe -O2 -std=c++11 -c main.cpp -o main.o
+g++.exe -o Service.exe SampleService.o ServiceBase.o ServiceInstaller.o main.o -static -static-libstdc++ -static-libgcc
+```
 
 ### MinGW 7.3.0 Downloads
+
+Note, this post is old, and I now recommend using a later version of MinGW-w64. Checkout the latest versions [here](https://github.com/brechtsanders/winlibs_mingw/releases/tag/11.1.0-12.0.0-9.0.0-r2)
 
 [Download MinGW 7.3.0 64bit posix](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/7.3.0/threads-posix/seh/x86_64-7.3.0-release-posix-seh-rt_v5-rev0.7z/)
  From SourceForge
@@ -40,7 +52,7 @@ You will be able to write your own service code [in the SampleService.cpp file](
 This is where your code may go. It is not required to have your code here. It may help to instead instantiate an object of your own service application class, and execute an update within the while loop.
 
 ### Please Note
-Your antivirus will flag your binary as dangerous. The reason for this is due to the unsigned executable that straight installs a windows service. Under normal circumstances, this is very dangerous if you don't know the code or you don't know what you are doing. Because this is for educational purposes, this is safe to do so.
+Your antivirus will most likely flag your binary as dangerous. The reason for this is due to the unsigned executable that straight up tries to install a windows service. Under normal circumstances, this is very dangerous if you don't know the code or you don't know what you are doing. Because this is for educational purposes, this is safe to do so.
 
 ## After Compiling
 
